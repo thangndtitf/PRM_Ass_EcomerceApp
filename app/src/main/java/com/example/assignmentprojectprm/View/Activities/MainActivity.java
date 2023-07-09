@@ -1,8 +1,10 @@
-package com.example.assignmentprojectprm;
+package com.example.assignmentprojectprm.View.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.assignmentprojectprm.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".View.Activities.LoginActivity"
     android:background="@drawable/bggg"
     >
 
@@ -26,7 +26,7 @@
 
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/LoginEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -43,7 +43,7 @@
         />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/LoginPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -55,13 +55,13 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/LoginEmail"
 
         />
 
     <Button
         android:backgroundTint="@color/pink"
-        android:id="@+id/button2"
+        android:id="@+id/regisBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="signin"
@@ -71,7 +71,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/LoginPassword"
         app:layout_constraintWidth_percent=".4" />
 
 
@@ -82,9 +82,9 @@
         android:text="Dont Have An Account?"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/LoginPassword"
+        app:layout_constraintStart_toStartOf="@+id/LoginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/regisBtn"
         app:layout_constraintVertical_bias=".3" />
 
 

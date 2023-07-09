@@ -2,16 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.assignmentprojectprm">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AssignmentProjectPRM">
+        android:theme="@style/Theme.AssignmentProjectPRM"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".RegisActivity"
-            android:exported="true" >
+            android:name=".View.Activities.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.Activities.RegisActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,13 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".View.Activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:name=".View.Activities.MainActivity"
+            android:exported="true"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
