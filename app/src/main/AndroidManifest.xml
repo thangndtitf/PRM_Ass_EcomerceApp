@@ -14,7 +14,10 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".View.Activities.OnboardingActivity"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
+
+
         <activity
             android:name=".View.Activities.RegisActivity"
             android:exported="true">
@@ -27,9 +30,7 @@
         <activity
             android:name=".View.Activities.LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".View.Activities.MainActivity"
-            android:exported="true"></activity>
+        <activity android:name=".View.Activities.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -3,6 +3,7 @@ package com.example.assignmentprojectprm.View.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -26,6 +27,8 @@ public class RegisActivity extends AppCompatActivity {
     Button regisBtn;
     User regisUser;
     Gson gson;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,18 @@ public class RegisActivity extends AppCompatActivity {
         regisBtn = findViewById(R.id.regisBtn);
         regisUser = new User();
         gson = new Gson();
+        sharedPreferences = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
 
+        boolean isFirstTime = sharedPreferences.getBoolean("firstTime", true);
+        if(isFirstTime){
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("firstTime", false);
+            editor.commit();
+            Intent intent = new Intent(RegisActivity.this, OnboardingActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
 
