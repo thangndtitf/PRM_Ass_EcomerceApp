@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 User userLogin = response.body();
                 Toast.makeText(LoginActivity.this, "Login Success " + userLogin.getCustomerFullName(), Toast.LENGTH_SHORT).show();
-                userEmail.setText(userLogin.getCustomerFullName());
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
 
             @Override
