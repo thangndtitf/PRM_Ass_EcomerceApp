@@ -1,5 +1,6 @@
 package com.example.assignmentprojectprm.Model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 //public int productID { get; set; }
@@ -8,7 +9,7 @@ import java.math.BigDecimal;
 //public String productName { get; set; }
 //public String description { get; set; }
 //public decimal price { get; set; }
-public class ProductML {
+public class ProductML implements Serializable {
     private int productID;
     private int productTypeID;
     private String description;

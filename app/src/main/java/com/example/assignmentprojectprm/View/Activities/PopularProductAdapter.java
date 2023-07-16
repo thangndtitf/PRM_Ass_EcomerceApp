@@ -1,6 +1,8 @@
 package com.example.assignmentprojectprm.View.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,10 +37,19 @@ public class PopularProductAdapter extends RecyclerView.Adapter<PopularProductAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.name.setText(popularProducts.get(position).getProductName());
         holder.price.setText( popularProducts.get(position).getPrice().toString());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,DetailActivity.class);
+                intent.putExtra("detailed", popularProducts.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

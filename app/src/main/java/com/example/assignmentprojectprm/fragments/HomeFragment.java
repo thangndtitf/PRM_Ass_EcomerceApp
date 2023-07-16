@@ -1,6 +1,7 @@
 package com.example.assignmentprojectprm.fragments;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -22,6 +24,7 @@ import com.example.assignmentprojectprm.R;
 import com.example.assignmentprojectprm.View.Activities.CategoryAdapter;
 import com.example.assignmentprojectprm.View.Activities.NewProductsApdater;
 import com.example.assignmentprojectprm.View.Activities.PopularProductAdapter;
+import com.example.assignmentprojectprm.View.Activities.ShowAllActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +36,7 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
+    TextView catShowAll, popularShowAll,newProductShowAll;
     LinearLayout linearLayout;
     ProgressDialog progressDialog;
     RecyclerView catRecyclerView, newProductRecyclerView, popularRecyclerView;
@@ -64,6 +68,31 @@ public class HomeFragment extends Fragment {
         catRecyclerView = root.findViewById(R.id.rec_category);
         newProductRecyclerView = root.findViewById(R.id.new_product_rec);
         popularRecyclerView = root.findViewById(R.id.popular_rec);
+        catShowAll = root.findViewById(R.id.category_see_all);
+        popularShowAll = root.findViewById(R.id.popular_see_all);
+        newProductShowAll = root.findViewById(R.id.newProducts_see_all);
+        catShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+        newProductShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+        popularShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+
         linearLayout = root.findViewById(R.id.home_layout);
         linearLayout.setVisibility(View.GONE);
         //Image Slider

@@ -13,20 +13,22 @@
         android:theme="@style/Theme.AssignmentProjectPRM"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".View.Activities.ShowAllActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.Activities.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.Activities.OnboardingActivity"
-            android:exported="false">
-        </activity>
-
-
+            android:exported="false" />
         <activity
             android:name=".View.Activities.RegisActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".View.Activities.LoginActivity"
             android:exported="false" />
-        <activity android:name=".View.Activities.MainActivity"
+        <activity
+            android:name=".View.Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

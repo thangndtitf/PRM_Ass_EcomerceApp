@@ -7,14 +7,17 @@
         <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.2785" />
         <entry key="app/src/main/res/font/aclonica.xml" value="0.21875" />
         <entry key="app/src/main/res/font/amethysta.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_regis.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_show_all.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/category_list.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/new_products.xml" value="0.45" />
-        <entry key="app/src/main/res/layout/popular_items.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/popular_items.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/show_all_item.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/sliding_layout.xml" value="0.18854166666666666" />
       </map>
     </option>
