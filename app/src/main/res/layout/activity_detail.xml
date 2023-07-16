@@ -7,6 +7,8 @@
     tools:context=".View.Activities.DetailActivity">
 
 
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -17,6 +19,15 @@
         android:src="@drawable/ic_launcher_background"
         android:scaleType="centerCrop"
         />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailed_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Product Detailed" />
 
     <androidx.cardview.widget.CardView
         android:translationY="-50dp"

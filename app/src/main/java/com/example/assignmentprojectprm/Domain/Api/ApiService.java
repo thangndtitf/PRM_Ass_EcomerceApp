@@ -2,6 +2,8 @@ package com.example.assignmentprojectprm.Domain.Api;
 
 import com.example.assignmentprojectprm.Model.LoginObj;
 import com.example.assignmentprojectprm.Model.ProductML;
+import com.example.assignmentprojectprm.Model.SaleOrderDetailML;
+import com.example.assignmentprojectprm.Model.SaleOrderReBD;
 import com.example.assignmentprojectprm.Model.User;
 import com.example.assignmentprojectprm.Model.productTypeML;
 import com.google.gson.Gson;
@@ -22,7 +24,7 @@ public interface ApiService {
     Gson gson = new GsonBuilder().setDateFormat("yyy-mm-dd HH:mm:ss").create();
 
     ApiService apiService = new Retrofit.Builder()
-            .baseUrl("https://a231-125-235-239-147.ngrok-free.app")
+            .baseUrl("https://78c4-125-235-239-147.ngrok-free.app")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(ApiService.class);
 
@@ -39,6 +41,13 @@ public interface ApiService {
     @GET("getAllProduct")
     Call<List<ProductML>> getAllProduct();
 
+    @GET("getProductByType")
+    Call<List<ProductML>>getProductByType(@Query("productType")int productType);
 
+    @POST("insertNewSO")
+    Call<Integer> insertNewSaleOrder(@Body SaleOrderReBD reBD);
+
+    @GET("getListSoDetailBySoID")
+    Call<List<SaleOrderDetailML>> getListSoDetail(@Query("cusId") int cusId);
 
 }

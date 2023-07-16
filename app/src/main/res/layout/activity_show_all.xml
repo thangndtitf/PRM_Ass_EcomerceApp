@@ -6,12 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".View.Activities.ShowAllActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/showalltollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Product List"
+        android:theme="?attr/actionBarTheme"
+        android:background ="#8ff7fd"
+        android:minHeight="?attr/actionBarSize"
+        tools:ignore="MissingConstraints" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/show_all_rec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/showalltollbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

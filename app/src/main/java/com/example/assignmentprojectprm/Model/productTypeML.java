@@ -1,16 +1,14 @@
 package com.example.assignmentprojectprm.Model;
 
-public class productTypeML {
+import java.io.Serializable;
+
+public class productTypeML implements Serializable {
     String imageUrl;
     String productTypeName;
     String description;
     int productTypeID;
 
-    public productTypeML(String imageUrl, String productTypeName, String description) {
-        this.imageUrl = imageUrl;
-        this.productTypeName = productTypeName;
-        this.description = description;
-    }
+
 
     public productTypeML(String imageUrl, String productTypeName, String description, int productTypeID) {
         this.imageUrl = imageUrl;

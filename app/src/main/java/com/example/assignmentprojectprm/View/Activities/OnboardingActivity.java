@@ -32,7 +32,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_onboarding);
         //hide toolbar
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         viewPager = findViewById(R.id.slider);
         dotsLayout = findViewById(R.id.dots);
         getStartedbtn = findViewById(R.id.get_started_btn);

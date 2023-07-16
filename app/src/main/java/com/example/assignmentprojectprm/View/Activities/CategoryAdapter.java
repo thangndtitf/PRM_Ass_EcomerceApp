@@ -1,6 +1,8 @@
 package com.example.assignmentprojectprm.View.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +34,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(list.get(position).getImageUrl()).into(holder.catImg);
         holder.catName.setText(list.get(position).getProductTypeName());
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ShowAllActivity.class);
+                productTypeML cat = new productTypeML();
+                cat = list.get(position);
+                intent.putExtra("type", cat.getProductTypeID());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

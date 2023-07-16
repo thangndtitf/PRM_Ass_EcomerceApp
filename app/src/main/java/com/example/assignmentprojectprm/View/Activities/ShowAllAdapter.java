@@ -1,6 +1,8 @@
 package com.example.assignmentprojectprm.View.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,10 +35,19 @@ public class ShowAllAdapter extends RecyclerView.Adapter<ShowAllAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 //        Glide.with(context).load(list.get(position).getDescription()).into(holder.mItemImage);
         holder.mCost.setText("$"+ list.get(position).getPrice().toString());
         holder.mName.setText(list.get(position).getProductName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,DetailActivity.class);
+                intent.putExtra("detailed", list.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
