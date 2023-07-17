@@ -15,6 +15,7 @@ import com.example.assignmentprojectprm.Model.ProductML;
 import com.example.assignmentprojectprm.Model.User;
 import com.example.assignmentprojectprm.R;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,9 +79,14 @@ public class AddressActivity extends AppCompatActivity implements  AddressAdapte
         paymentBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                BigDecimal amount = new BigDecimal(0);
                 if(obj instanceof ProductML){
                     ProductML productML = (ProductML) obj;
+                    amount = productML.getPrice();
                 }
+                Intent intent = new Intent(AddressActivity.this, PaymentActivity.class);
+                intent.putExtra("amount", amount.toString());
+                startActivity(intent);
             }
         });
 

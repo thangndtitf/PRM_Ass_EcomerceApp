@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.example.assignmentprojectprm.R;
 
+import java.math.BigDecimal;
+
 public class PaymentActivity extends AppCompatActivity {
 
     Toolbar toolbar;
@@ -21,10 +23,15 @@ public class PaymentActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        BigDecimal amount = new BigDecimal(0);
+        amount = new BigDecimal(getIntent().getStringExtra("amount"));
+
         subTotal = findViewById(R.id.sub_total);
         discount = findViewById(R.id.textView17);
         shipping = findViewById(R.id.textView18);
         total = findViewById(R.id.total_amt);
+
+        subTotal.setText(amount.toString() + "$");
 
     }
 }
