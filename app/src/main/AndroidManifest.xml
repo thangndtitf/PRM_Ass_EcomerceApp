@@ -3,6 +3,13 @@
     package="com.example.assignmentprojectprm">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+<!--    <meta-data-->
+<!--        android:name="com.google.android.geo.API_KEY"-->
+<!--        android:value="AIzaSyD6zOjTNFCdU2nfg9NmZ6fMwyHsgQ_Bkn0" />-->
 
     <application
         android:allowBackup="true"
@@ -12,6 +19,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AssignmentProjectPRM"
         android:usesCleartextTraffic="true">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD6zOjTNFCdU2nfg9NmZ6fMwyHsgQ_Bkn0" />
+
         <activity
             android:name=".View.Activities.CartActivity"
             android:exported="false" />
@@ -32,13 +55,13 @@
         </activity>
         <activity
             android:name=".View.Activities.RegisActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".View.Activities.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".View.Activities.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

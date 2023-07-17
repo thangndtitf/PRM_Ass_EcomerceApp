@@ -15,7 +15,9 @@
         <entry key="app/src/main/res/layout/activity_regis.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_show_all.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/category_list.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_google_map.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/layout/my_cart_item.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/new_products.xml" value="0.45" />
         <entry key="app/src/main/res/layout/popular_items.xml" value="0.1" />

@@ -17,6 +17,9 @@ import android.widget.Toast;
 import com.example.assignmentprojectprm.Domain.Api.ApiService;
 import com.example.assignmentprojectprm.Model.SaleOrderDetailML;
 import com.example.assignmentprojectprm.R;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -64,7 +67,10 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
+
 
     public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
