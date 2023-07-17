@@ -79,7 +79,7 @@
                 android:fontFamily="@font/amethysta"
                 android:text="90"
                 android:textColor="#673AB7"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/dollar"
                 app:layout_constraintStart_toEndOf="@+id/dollar"

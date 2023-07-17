@@ -3,6 +3,7 @@ package com.example.assignmentprojectprm.View.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -48,16 +49,16 @@ public class AddAddressActivity extends AppCompatActivity {
                 String finalAddress = "";
 
                 if(!userName.isEmpty()){
-                    finalAddress += userName;
+                    finalAddress += userName+ ", ";
                 }
                 if(!userAddress.isEmpty()){
-                    finalAddress += userAddress;
+                    finalAddress += userAddress+ ", ";
                 }
                 if(!userCity.isEmpty()){
-                    finalAddress += userCity;
+                    finalAddress += userCity+ ", ";
                 }
                 if(!userpostalCode.isEmpty()){
-                    finalAddress += userpostalCode;
+                    finalAddress += userpostalCode+ ", ";
                 }
                 if(!userPhoneNum.isEmpty()){
                     finalAddress += userPhoneNum;
@@ -66,6 +67,8 @@ public class AddAddressActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         Toast.makeText(AddAddressActivity.this, "Add New Address Success", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(AddAddressActivity.this,DetailActivity.class));
+                        finish();
                     }
 
                     @Override
