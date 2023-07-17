@@ -1,6 +1,8 @@
 package com.example.assignmentprojectprm.Model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private int customerID;
     private String userName;
     private String userPassword;
@@ -13,13 +15,15 @@ public class User {
     private String cusFullAddress;
     private String cusPhone;
     private String userEmail;
+    private String postalCode;
+    private boolean selected;
 
     public User(int customerID, String userName,
                 String userPassword, String customerFullName,
                 String cusCountry, String cusProvince,
                 String cusDistrict, String cusWard,
                 String cusAddress, String cusFullAddress,
-                String cusPhone, String userEmail)
+                String cusPhone, String userEmail, String postalCode)
     {
         this.customerID = customerID;
         this.userName = userName;
@@ -33,10 +37,12 @@ public class User {
         this.cusFullAddress = cusFullAddress;
         this.cusPhone = cusPhone;
         this.userEmail = userEmail;
+        this.postalCode = postalCode;
+        this.selected = false;
     }
 
     public User() {
-
+        this.selected = false;
     }
 
     public int getCustomerID() {
@@ -133,5 +139,21 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

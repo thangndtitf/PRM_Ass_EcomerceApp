@@ -24,7 +24,7 @@ public interface ApiService {
     Gson gson = new GsonBuilder().setDateFormat("yyy-mm-dd HH:mm:ss").create();
 
     ApiService apiService = new Retrofit.Builder()
-            .baseUrl("https://78c4-125-235-239-147.ngrok-free.app")
+            .baseUrl("https://b301-116-110-43-247.ngrok-free.app")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(ApiService.class);
 
@@ -49,5 +49,8 @@ public interface ApiService {
 
     @GET("getListSoDetailBySoID")
     Call<List<SaleOrderDetailML>> getListSoDetail(@Query("cusId") int cusId);
+
+    @GET("AddNewAddress")
+    Call<User> addnewAddress(@Query("cusID")int userID, @Query("cusAddress")String userAdd,@Query("cussPhone")String userPhone,@Query("cusPostalCode")String userCode);
 
 }

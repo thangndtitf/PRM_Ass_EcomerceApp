@@ -3,6 +3,7 @@ package com.example.assignmentprojectprm.View.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -102,6 +103,26 @@ public class DetailActivity extends AppCompatActivity {
             totalPrice = showAllProduct.getPrice().multiply(BigDecimal.valueOf(totalQuantity));
         }
 
+
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailActivity.this, AddressActivity.class);
+                if(newProduct != null){
+                    intent.putExtra("item", newProduct);
+                }
+                if(popularProduct != null){
+                    intent.putExtra("item", popularProduct);
+                }
+                if(showAllProduct != null){
+                    intent.putExtra("item", showAllProduct);
+                }
+
+                startActivity(intent);
+            }
+        });
+
+        //Add to Cart Listener
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
