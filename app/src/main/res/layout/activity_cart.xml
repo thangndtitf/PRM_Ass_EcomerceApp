@@ -47,7 +47,7 @@
         tools:listitem="@layout/my_cart_item"
         />
     <Button
-        android:id="@+id/buy_now"
+        android:id="@+id/car_buy_now"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"

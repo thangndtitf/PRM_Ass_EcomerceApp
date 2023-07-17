@@ -16,13 +16,7 @@
         android:theme="@style/Theme.AssignmentProjectPRM"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".View.Activities.PaymentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".View.Activities.AddAddressActivity"
-            android:exported="false" />
-        <activity
-            android:name=".View.Activities.AddressActivity"
+            android:name=".View.Activities.GoogleMapActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -39,6 +33,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD6zOjTNFCdU2nfg9NmZ6fMwyHsgQ_Bkn0" />
 
+        <activity
+            android:name=".View.Activities.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.Activities.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.Activities.AddressActivity"
+            android:exported="false" />
         <activity
             android:name=".View.Activities.CartActivity"
             android:exported="false" />
@@ -72,7 +75,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_0uSxwuMBMCGS6Y"/>
+            android:value="rzp_test_0uSxwuMBMCGS6Y" />
     </application>
 
 </manifest>

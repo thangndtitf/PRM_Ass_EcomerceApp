@@ -39,7 +39,7 @@ public class NewProductsApdater extends RecyclerView.Adapter<NewProductsApdater.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-//        Glide.with(context).load(listProduct.get(position).getDescription()).into(holder.newImg);
+        Glide.with(context).load(listProduct.get(position).getDescription()).into(holder.newImg);
         holder.newProductName.setText(listProduct.get(position).getProductName());
         holder.newPrice.setText(listProduct.get(position).getPrice().toString());
 

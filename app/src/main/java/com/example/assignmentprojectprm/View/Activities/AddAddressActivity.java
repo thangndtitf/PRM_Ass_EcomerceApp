@@ -31,6 +31,12 @@ public class AddAddressActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.add_address_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         name = findViewById(R.id.ad_name);
         address = findViewById(R.id.ad_address);
         city = findViewById(R.id.ad_city);

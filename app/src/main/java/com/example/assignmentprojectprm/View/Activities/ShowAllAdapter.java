@@ -36,7 +36,7 @@ public class ShowAllAdapter extends RecyclerView.Adapter<ShowAllAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-//        Glide.with(context).load(list.get(position).getDescription()).into(holder.mItemImage);
+        Glide.with(context).load(list.get(position).getDescription()).into(holder.mItemImage);
         holder.mCost.setText("$"+ list.get(position).getPrice().toString());
         holder.mName.setText(list.get(position).getProductName());
 

@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.assignmentprojectprm.Domain.Api.ApiService;
 import com.example.assignmentprojectprm.Model.ProductML;
+import com.example.assignmentprojectprm.Model.SaleOrderDetailML;
 import com.example.assignmentprojectprm.Model.User;
 import com.example.assignmentprojectprm.R;
 
@@ -40,13 +41,19 @@ public class AddressActivity extends AppCompatActivity implements  AddressAdapte
         toolbar = findViewById(R.id.address_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true );
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         Object obj = getIntent().getSerializableExtra("item");
 
         recyclerView = findViewById(R.id.address_recycler);
         addAddressBTN = findViewById(R.id.add_address_btn);
         paymentBTN = findViewById(R.id.payment_btn);
-        paymentBTN = findViewById(R.id.payment_btn);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         listUserObj = new ArrayList<>();
         addressAdapter = new AddressAdapter(getApplicationContext(), listUserObj, this);
@@ -83,6 +90,7 @@ public class AddressActivity extends AppCompatActivity implements  AddressAdapte
                 if(obj instanceof ProductML){
                     ProductML productML = (ProductML) obj;
                     amount = productML.getPrice();
+
                 }
                 Intent intent = new Intent(AddressActivity.this, PaymentActivity.class);
                 intent.putExtra("amount", amount.toString());

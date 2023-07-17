@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.assignmentprojectprm.Model.ProductML;
 import com.example.assignmentprojectprm.R;
 
@@ -38,6 +39,7 @@ public class PopularProductAdapter extends RecyclerView.Adapter<PopularProductAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        Glide.with(context).load(popularProducts.get(position).getDescription()).into(holder.imageView);
 
         holder.name.setText(popularProducts.get(position).getProductName());
         holder.price.setText( popularProducts.get(position).getPrice().toString());

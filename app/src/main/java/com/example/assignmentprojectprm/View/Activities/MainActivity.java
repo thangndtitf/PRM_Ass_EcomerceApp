@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
+
         homeFragment = new HomeFragment();
         loadFragment(homeFragment);
     }
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(id == R.id.menu_my_cart){
             startActivity(new Intent(MainActivity.this, CartActivity.class));
+        }else if(id == R.id.menu_my_map){
+            startActivity(new Intent(MainActivity.this, GoogleMapActivity.class));
         }
         return true;
     }

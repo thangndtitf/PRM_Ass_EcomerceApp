@@ -42,9 +42,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ShowAllActivity.class);
-                productTypeML cat = new productTypeML();
-                cat = list.get(position);
-                intent.putExtra("type", cat.getProductTypeID());
+
+
+                intent.putExtra("type", String.valueOf(list.get(position).getProductTypeID()));
                 context.startActivity(intent);
             }
         });

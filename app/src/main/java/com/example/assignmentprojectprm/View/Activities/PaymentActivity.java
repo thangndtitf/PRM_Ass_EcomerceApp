@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.assignmentprojectprm.Model.SaleOrderDetailML;
 import com.example.assignmentprojectprm.R;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
@@ -18,6 +19,8 @@ import com.razorpay.PaymentResultListener;
 import org.json.JSONObject;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaymentActivity extends AppCompatActivity implements PaymentResultListener {
 
@@ -25,6 +28,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
     TextView subTotal, discount, shipping, total;
     Button paymentBtn;
     BigDecimal amount = new BigDecimal(0);
+    BigDecimal cart_amount = new BigDecimal(0);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +36,14 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         toolbar = findViewById(R.id.payment_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
+        Bundle bundle = getIntent().getExtras();
 
         amount = new BigDecimal(getIntent().getStringExtra("amount"));
 
@@ -41,8 +52,12 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         shipping = findViewById(R.id.textView18);
         total = findViewById(R.id.total_amt);
         paymentBtn = findViewById(R.id.pay_btn);
+//        if(amount == null && cart_amount!= null){
+//            subTotal.setText(cart_amount.toString() + "$");
+//        }else {
+            subTotal.setText(amount.toString() + "$");
+//        }
 
-        subTotal.setText(amount.toString() + "$");
         paymentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

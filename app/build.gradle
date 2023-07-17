@@ -27,17 +27,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-//allprojects {
-//    repositories {
-//        mavenCentral()
-//    }
-//}
 
-//dependencyResolutionManagement {
-//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-//    repositories {
-//        google()
-//        mavenCentral()}}
 
 dependencies {
 
@@ -62,6 +52,7 @@ dependencies {
 
     //Razor payment method
     implementation 'com.razorpay:checkout:1.6.33'
+    implementation 'com.google.android.material:material:1.6.0'
 
 
 }

@@ -24,7 +24,7 @@ public interface ApiService {
     Gson gson = new GsonBuilder().setDateFormat("yyy-mm-dd HH:mm:ss").create();
 
     ApiService apiService = new Retrofit.Builder()
-            .baseUrl("https://b301-116-110-43-247.ngrok-free.app")
+            .baseUrl("https://e7da-116-110-43-247.ngrok-free.app")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(ApiService.class);
 
